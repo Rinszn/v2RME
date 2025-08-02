@@ -1,0 +1,223 @@
+/* Reset & font */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f6ff;
+  margin: 0;
+}
+
+/* Wrapper */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* Container */
+.signup-container {
+  display: flex;
+  width: 900px;
+  height: 600px; /* ✅ Fixed height to prevent resize */
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+/* Sidebar */
+.signup-sidebar {
+  background: linear-gradient(180deg, #483eff, #8b7cfa);
+  padding: 30px;
+  color: white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px 0 0 15px;
+}
+
+.signup-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.signup-sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.signup-sidebar li.active {
+  opacity: 1;
+}
+
+.signup-sidebar span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.signup-sidebar li.active span {
+  background: white;
+  color: #483eff;
+}
+
+.signup-sidebar p {
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.signup-sidebar strong {
+  font-size: 14px;
+}
+
+/* Decorative blob */
+.sidebar-graphic {
+  height: 100px;
+  background: url('https://www.transparenttextures.com/patterns/memphis-mini.png');
+  background-size: cover;
+  opacity: 0.2;
+}
+
+/* Form Area */
+.signup-form-area {
+  flex: 1;
+  padding: 40px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keeps content at top and buttons at bottom */
+}
+
+.form-content {
+  flex-grow: 1;
+}
+
+.signup-form-area h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c2c54;
+}
+
+.signup-form-area .text-muted {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.signup-form-area label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+.signup-form-area input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Buttons */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: #0b2545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #081d36;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #0b2545;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: 1px solid #0b2545;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #e6f0ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: none;
+  }
+
+  .signup-sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 10px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .signup-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .signup-sidebar li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .signup-sidebar div {
+    display: none; /* Hide step labels for compact mobile view */
+  }
+
+  .signup-form-area {
+    padding: 24px 16px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
